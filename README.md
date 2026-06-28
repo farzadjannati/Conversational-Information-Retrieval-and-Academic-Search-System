@@ -1,22 +1,23 @@
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f172a,50:3730a3,100:4f46e5&height=220&section=header&text=Agentic%20Conversational%20Search&fontSize=34&fontColor=ffffff&fontAlignY=50&animation=fadeIn" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f172a,50:3730a3,100:4f46e5&height=220&section=header&text=Agentic%20CIR%20System&fontSize=38&fontColor=ffffff&fontAlignY=50&animation=fadeIn" />
 </div>
 
 ---
 
-# Agentic Conversational Search and Information Retrieval System
+# Agentic Conversational Information Retrieval (CIR) and Academic Search System
 
-This repository implements an advanced Conversational Information Retrieval (CIR) framework. By leveraging Large Language Models (LLMs) to simulate human researchers, orchestrate multi-turn clarifying dialogues, and autonomously rewrite search queries, the system dramatically improves retrieval precision over traditional semantic search methodologies.
+This repository implements an advanced **Conversational Information Retrieval (CIR)** framework. By leveraging Large Language Models (LLMs) to simulate human researchers, orchestrate multi-turn clarifying dialogues, and autonomously rewrite search queries, the system dramatically improves retrieval precision over traditional semantic search methodologies.
 
 <div align="left">
-  [![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=flat&logo=python&logoColor=white)](https://www.python.org/)
-  [![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-F37626?style=flat&logo=jupyter&logoColor=white)](https://jupyter.org/)
-  [![OpenAI](https://img.shields.io/badge/OpenAI-LLM_Agents-10A37F?style=flat&logo=openai&logoColor=white)](https://openai.com/)
-  [![LanceDB](https://img.shields.io/badge/LanceDB-Vector_Database-D84B2A?style=flat)](https://lancedb.github.io/lancedb/)
-  [![HuggingFace](https://img.shields.io/badge/HuggingFace-BAAI_bge_small-F5A623?style=flat&logo=huggingface&logoColor=white)](https://huggingface.co/)
-  [![PyMuPDF](https://img.shields.io/badge/PyMuPDF-Document_Parsing-6D28D9?style=flat)](#)
-  [![Eval](https://img.shields.io/badge/Eval-LLM_as_a_Judge-0284C7?style=flat)](#)
-  [![License](https://img.shields.io/badge/License-MIT-4B5563?style=flat)](https://opensource.org/licenses/MIT)
+  <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3.10+-3776AB?style=flat&logo=python&logoColor=white" /></a>
+  <a href="https://jupyter.org/"><img src="https://img.shields.io/badge/Jupyter-Notebook-F37626?style=flat&logo=jupyter&logoColor=white" /></a>
+  <a href="https://www.langchain.com/"><img src="https://img.shields.io/badge/LangChain-LLM_Orchestration-1C3C3C?style=flat&logo=langchain&logoColor=white" /></a>
+  <a href="https://openai.com/"><img src="https://img.shields.io/badge/OpenAI-LLM_Agents-10A37F?style=flat&logo=openai&logoColor=white" /></a>
+  <a href="https://lancedb.github.io/lancedb/"><img src="https://img.shields.io/badge/LanceDB-Vector_Database-D84B2A?style=flat" /></a>
+  <a href="https://huggingface.co/BAAI/bge-small-en-v1.5"><img src="https://img.shields.io/badge/HuggingFace-BAAI_bge_small-F5A623?style=flat&logo=huggingface&logoColor=white" /></a>
+  <a href="https://pymupdf.readthedocs.io/"><img src="https://img.shields.io/badge/PyMuPDF-Document_Parsing-6D28D9?style=flat" /></a>
+  <a href="#"><img src="https://img.shields.io/badge/Eval-LLM_as_a_Judge-0284C7?style=flat" /></a>
+  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-4B5563?style=flat" /></a>
 </div>
 
 ## Abstract
@@ -51,7 +52,7 @@ This project solves the ambiguity of short user queries in academic literature s
 * **LLM User Simulation:** Automated testing pipeline using LLMs prompted with hidden user personas and specific information needs.
 * **Intelligent Query Rewriting:** Compression of noisy multi-turn conversations into dense, structured queries for semantic retrieval.
 * **Dense Vector Search:** High-speed semantic similarity matching using LanceDB and `BAAI/bge-small-en-v1.5` embeddings.
-* **LLM-as-a-Judge Evaluation:** Automated quality assessment of generated dialogues validated against human annotation using Fleiss' Kappa (κ).
+* **LLM-as-a-Judge Evaluation:** Automated quality assessment of generated dialogues validated against human annotation using Fleiss' Kappa.
 * **Automated PDF Parsing:** Strategic extraction of high-density semantic signals from the first pages of academic papers using PyMuPDF4LLM.
 
 ---
@@ -61,30 +62,30 @@ The system architecture separates the conversational interaction from the retrie
 
 ```mermaid
 flowchart TB
-    subgraph Simulation Layer
-        U[Hidden Information Need]
-        US[LLM User Simulator]
+    subgraph Simulation_Layer [Simulation Layer]
+        U["Hidden Information Need"]
+        US["LLM User Simulator"]
         U --> US
     end
 
-    subgraph Agent Layer
-        SA[Search Assistant Agent]
-        QR[Query Rewriter Agent]
+    subgraph Agent_Layer [Agent Layer]
+        SA["Search Assistant Agent"]
+        QR["Query Rewriter Agent"]
     end
 
-    subgraph Retrieval Layer
-        EM[SentenceTransformer Embeddings]
-        VD[LanceDB Vector Database]
+    subgraph Retrieval_Layer [Retrieval Layer]
+        EM["SentenceTransformer Embeddings"]
+        VD["LanceDB Vector Database"]
     end
 
-    subgraph Knowledge Base
-        PDF[Academic PDFs]
-        LP[PyMuPDF Parser]
+    subgraph Knowledge_Base [Knowledge Base]
+        PDF["Academic PDFs"]
+        LP["PyMuPDF Parser"]
     end
 
-    subgraph Evaluation Layer
-        Eval[Precision@1 Metric]
-        Judge[LLM-as-a-Judge Evaluator]
+    subgraph Evaluation_Layer [Evaluation Layer]
+        Eval["Precision at 1 Metric"]
+        Judge["LLM-as-a-Judge Evaluator"]
     end
 
     US <-->|Multi-turn Clarifying Dialogue| SA
@@ -142,7 +143,7 @@ To ensure the Search Assistant generates high-quality clarifying questions, an e
 3. Usefulness
 4. Overall Quality
 
-**Inter-Rater Reliability:** Measured using **Fleiss' Kappa (κ)**, the evaluation showed *Excellent* agreement (κ = 0.81) for the "Usefulness" metric, confirming that automated LLMs are highly reliable judges for conversational search utility.
+**Inter-Rater Reliability:** Measured using **Fleiss' Kappa**, the evaluation showed *Excellent* agreement (0.81) for the "Usefulness" metric, confirming that automated LLMs are highly reliable judges for conversational search utility.
 
 ---
 
@@ -150,7 +151,7 @@ To ensure the Search Assistant generates high-quality clarifying questions, an e
 
 | Component | Purpose / Library |
 | -------------------- | ------------------------------- |
-| **LLM Orchestration** | OpenAI API (GPT Models), LangChain Concepts |
+| **LLM Orchestration** | OpenAI API (GPT Models), LangChain |
 | **Vector Storage** | LanceDB |
 | **Embedding Model** | SentenceTransformers (`BAAI/bge-small-en-v1.5`) |
 | **Document Processing**| PyMuPDF4LLM, PyMuPDF |
@@ -162,7 +163,7 @@ To ensure the Search Assistant generates high-quality clarifying questions, an e
 ## Project Structure
 
 ```text
-Agentic-Conversational-Search/
+Agentic-CIR-Conversational-Search-System/
 │
 ├── conversational_search_pipeline.ipynb   # Main workflow and implementation
 │
@@ -187,8 +188,8 @@ Agentic-Conversational-Search/
 
 ### Clone Repository
 ```bash
-git clone https://github.com/farzadjannati/Agentic-Conversational-Search.git
-cd Agentic-Conversational-Search
+git clone https://github.com/farzadjannati/Agentic-CIR-Conversational-Search-System.git
+cd Agentic-CIR-Conversational-Search-System
 ```
 
 ### Create Environment
@@ -238,6 +239,5 @@ If you find this research or implementation useful, please consider giving the r
 ---
 
 <p align="center">
-  Built with ❤️ using OpenAI, LanceDB, and SentenceTransformers
+  Built with ❤️ using LangChain, OpenAI, LanceDB, and SentenceTransformers
 </p>
-```
