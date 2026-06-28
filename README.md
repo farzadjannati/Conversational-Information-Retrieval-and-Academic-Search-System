@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f172a,50:3730a3,100:4f46e5&height=220&section=header&text=Agentic%20CIR%20System&fontSize=38&fontColor=ffffff&fontAlignY=50&animation=fadeIn" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:111827,100:4c1d95&height=220&section=header&text=Agentic%20CIR%20System&fontSize=40&fontColor=ffffff&fontAlignY=45&animation=fadeIn&desc=Powered%20by%20LLMs%20&%20Vector%20Databases&descAlignY=65&descSize=18" />
 </div>
 
 ---
