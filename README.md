@@ -6,7 +6,7 @@
 
 # Agentic Conversational Information Retrieval (CIR) and Academic Search System
 
-This repository implements an advanced **Conversational Information Retrieval (CIR)** framework. By leveraging Large Language Models (LLMs) to simulate human researchers, orchestrate multi-turn clarifying dialogues, and autonomously rewrite search queries, the system dramatically improves retrieval precision over traditional semantic search methodologies.
+This framework represents an advanced **Conversational Information Retrieval (CIR)** framework. By leveraging Large Language Models (LLMs) to simulate human researchers, orchestrate multi-turn clarifying dialogues, and autonomously rewrite search queries, the system dramatically improves retrieval precision over traditional semantic search methodologies.
 
 <div align="left">
   <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3.10+-3776AB?style=flat&logo=python&logoColor=white" /></a>
